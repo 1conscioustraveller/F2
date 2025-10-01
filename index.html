@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Your Name] Photography</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream: #FAF9F7;
+      --blush: #E9CFCB;
+      --sage: #C8D5C0;
+      --charcoal: #333333;
+      --champagne: #D4B483;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Lato', sans-serif;
+      background-color: var(--cream);
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5em;
+    }
+
+    .script {
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.5rem;
+      color: var(--champagne);
+    }
+
+    a.button {
+      display: inline-block;
+      padding: 0.75em 1.5em;
+      background-color: var(--blush);
+      color: var(--charcoal);
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+      font-weight: 700;
+    }
+
+    a.button:hover {
+      background-color: var(--champagne);
+    }
+
+    section {
+      padding: 4em 2em;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .hero {
+      background: url('https://picsum.photos/1600/900?grayscale') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 8em 2em;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2em;
+    }
+
+    .about img {
+      max-width: 300px;
+      border-radius: 50%;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1em;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      display: block;
+      border-radius: 8px;
+      transition: transform 0.4s;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-item span {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      color: white;
+      font-size: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      border-radius: 8px;
+    }
+
+    .portfolio-item:hover span {
+      opacity: 1;
+    }
+
+    .experience-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2em;
+      text-align: center;
+    }
+
+    .testimonial {
+      background-color: var(--blush);
+      padding: 2em;
+      border-radius: 12px;
+      font-style: italic;
+    }
+
+    footer {
+      background: var(--charcoal);
+      color: white;
+      text-align: center;
+      padding: 2em;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Timeless Wedding & Lifestyle Photography</h1>
+      <p>Capturing love, laughter, and every little detail — so your story lasts forever.</p>
+      <a href="#portfolio" class="button">View Portfolio</a>
+      <a href="#contact" class="button">Book a Session</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about">
+    <img src="https://picsum.photos/400/400" alt="Photographer Portrait">
+    <div>
+      <h2>Hi, I’m [Your Name]!</h2>
+      <p>I believe the best photos come from real moments — the belly laughs, the quiet glances, the joyful tears. My goal is to create images that feel natural, emotional, and timeless.</p>
+      <p class="script">Let’s turn fleeting moments into forever memories.</p>
+    </div>
+  </section>
+
+  <!-- Portfolio Preview -->
+  <section id="portfolio">
+    <h2>Stories I’ve Captured</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="https://picsum.photos/500/400?random=1" alt="Weddings">
+        <span>Weddings</span>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://picsum.photos/500/400?random=2" alt="Engagements">
+        <span>Engagements</span>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://picsum.photos/500/400?random=3" alt="Lifestyle">
+        <span>Lifestyle</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section>
+    <h2>The Experience</h2>
+    <p>Your day should feel easy, fun, and unforgettable — the photos are just the bonus.</p>
+    <div class="experience-steps">
+      <div><h3>1. Connect</h3><p>Tell me your story.</p></div>
+      <div><h3>2. Plan</h3><p>We’ll create a relaxed, stress-free experience.</p></div>
+      <div><h3>3. Shoot</h3><p>You live the moment while I capture it all.</p></div>
+      <div><h3>4. Deliver</h3><p>Relive your story through timeless photos.</p></div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section>
+    <h2>Kind Words</h2>
+    <div class="testimonial">
+      “We felt so comfortable in front of the camera. The photos are more than we ever imagined — they feel like us. We’ll treasure them forever.” – Sarah & Miguel
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact" style="text-align:center;">
+    <h2>Let’s Tell Your Story</h2>
+    <p>Ready to capture your big day, your love story, or a moment in time?</p>
+    <a href="mailto:youremail@example.com" class="button">Send an Inquiry</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 [Your Name Photography] | Follow me on Instagram @yourhandle</p>
+  </footer>
+
+</body>
+</html>
